@@ -56,11 +56,11 @@ let arrayFormateado = data.replaceAll(' ', '').split('\n');
 arrayFormateado = arrayFormateado.splice(1, arrayFormateado.length - 2);
 
 function formarPisos(datos) {
-   let arrayNuevo = []
-   for (let i = 0; i < datos.length; i++) {
-      arrayNuevo.push([]);
-      arrayNuevo[i][0] = datos[i].split(',');
-   }
-   return arrayNuevo;
+  let arrayNuevo = [];
+  for (let i = 0; i < datos.length; i++) {
+    arrayNuevo.push([]);
+    arrayNuevo[i][0] = datos[i].split(',');
+  }
+  return arrayNuevo;
 }
 console.log(formarPisos(arrayFormateado));

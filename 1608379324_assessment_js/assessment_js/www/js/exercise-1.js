@@ -1,3 +1,4 @@
+'use strict';
 /**
  * #############################
  * ##  E J E R C I C I O   1  ##
@@ -18,8 +19,14 @@
 
 const text = 'Lorem Ipsum Dolor Sit Amet Consectetur, ¡Adipisicing Elit!.';
 
-const arrayPalabras = text.toLowerCase().replaceAll('!','').replaceAll('.','').replaceAll('¡','').replaceAll(',','').split(' ');
+const arrayPalabras = text
+  .toLowerCase()
+  .replaceAll('!', '')
+  .replaceAll('.', '')
+  .replaceAll('¡', '')
+  .replaceAll(',', '')
+  .split(' ');
 
-const arrayOrdenado=arrayPalabras.sort();
+const arrayOrdenado = arrayPalabras.sort();
 
 console.log(arrayOrdenado);

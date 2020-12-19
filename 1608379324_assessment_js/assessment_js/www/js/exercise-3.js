@@ -151,7 +151,7 @@ const cars = [
 
 //1
 let sumaTotalEdadesPersonas = persons.reduce((acumulador, persona) => {
-  return acumulador += persona.age;;
+  return (acumulador += persona.age);
 }, 0);
 //2
 let sumaTotalEdadesPersonasFrancesas = persons.reduce((acumulador, persona) => {
@@ -166,19 +166,18 @@ let nombreMascotas = persons.map((persona) => {
 });
 //4
 let personasConGato = persons.filter((persona) => {
-  return persona.pet.type === 'gato'
+  return persona.pet.type === 'gato';
 });
 //5
 let cochesDeEspañoles = cars.filter((coche, indice) => {
-  return persons[indice].car === coche.id && persons[indice].country === 'ES'
+  return persons[indice].car === coche.id && persons[indice].country === 'ES';
 });
 //6
 let personasConCocheFord = persons.filter((persona, indice) => {
-  return persona.car === cars[indice].id && cars[indice].brand === 'Ford'
+  return persona.car === cars[indice].id && cars[indice].brand === 'Ford';
 });
 //7
 let personasConInformacionCoche = persons.reduce((informacion, persona) => {
-
   let informacionCoche = cars.find((coche) => {
     return coche.id === persona.car;
   });
@@ -188,7 +187,7 @@ let personasConInformacionCoche = persons.reduce((informacion, persona) => {
     country: persona.country,
     age: persona.age,
     car: informacionCoche,
-    pet: persona.pet
+    pet: persona.pet,
   });
 
   return informacion;
